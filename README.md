@@ -1,12 +1,10 @@
 # CouchdbDesignDocs
 
-This is a simple utilize to force CouchDB to re-index design documents. This is particularly useful after migrating a CouchDB via a restore from a dumped file.
+This is a simple utilize to initiate the rebuild of indices associated with the views of CouchDB design documents. This is particularly useful after migrating a CouchDB via a restore from a dumped file.
 
-Generally, CouchDB updates the indexes design documents when accessed.
+Generally, CouchDB updates the indices of views for design documents when accessed. However, if an entire CouchDB with much data has just been restored, it is difficult to ensure that all indexes are updated prior to running a live system against the new CouchDB.
 
-However, if an entire CouchDB with much data has just been restored, it is difficult to ensure that all indexes are updated prior to running a live system against the new CouchDB.
-
-This utility enumerates and accesses all design documents to force CouchDB to index them.
+This utility enumerates and accesses all views for all design documents, which causes CouchDB to initiate a rebuild of all indices.
 
 ## Installation
 
@@ -27,9 +25,9 @@ Or install it yourself as:
 ## Usage
 
 ```
-bin/couchdb-index
+bin/rebuild-view-indices
 
-Usage: indexer.rb [options]
+Usage: rebuild-view-indices [options]
     -u, --username [USERNAME]        Username for basic auth. (e.g. 'admin')
     -p, --password [PASSWORD]        Password for basic auth. (e.g. 'secret')
     -H, --host [HOST]                CouchDB Host. (e.g. '192.168.0.1')
