@@ -6,23 +6,17 @@ require 'couchdb_rebuild_view_indices/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'couchdb_rebuild_view_indices'
-  spec.version       = CouchdbDesignDocs::VERSION
+  spec.version       = CouchdbRebuildViewIndices::VERSION
   spec.authors       = ['Justin Kulesza']
   spec.email         = ['justin.kulesza@atomicobject.com']
 
-  spec.summary       = 'Simple utility to force CouchDB to ' \
-                       're-index design documents.'
-  spec.description   = 'Simple utility to force CouchDB to ' \
-                       're-index design documents.'
+  spec.summary       = 'Simple utility to initiate the rebuild of indices '
+                       'assocated with views in CouchDB design documents.'
+  spec.description   = 'Simple utility to initiate the rebuild of indices '
+                       'assocated with views in CouchDB design documents.'
+
   spec.homepage      = 'https://github.com/kuleszaj/couchdb_rebuild_view_indices'
   spec.license       = 'MIT'
-
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  spec.metadata['allowed_push_host'] = \
-    "TODO: Set to 'http://mygemserver.com'" if spec.respond_to?(:metadata)
-  raise 'RubyGems 2.0 or newer is required to protect ' \
-        'against public gem pushes.' unless spec.respond_to?(:metadata)
 
   spec.files         = `git ls-files -z`.split("\x0").reject \
                        { |f| f.match(%r{^(test|spec|features)/}) }
