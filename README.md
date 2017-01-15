@@ -1,4 +1,4 @@
-# CouchdbDesignDocs
+# Couchdb Rebuild View Indices
 
 This is a simple utilize to initiate the rebuild of indices associated with the views of CouchDB design documents. This is particularly useful after migrating a CouchDB via a restore from a dumped file.
 
