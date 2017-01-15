@@ -7,7 +7,7 @@ require 'couchdb_rebuild_view_indices'
 options = {}
 
 OptionParser.new do |opts|
-  opts.banner = 'Usage: indexer.rb [options]'
+  opts.banner = 'Usage: rebuild-view-indices [options]'
 
   opts.on('-u', '--username [USERNAME]', \
           "Username for basic auth. (e.g. 'admin')") do |u|
